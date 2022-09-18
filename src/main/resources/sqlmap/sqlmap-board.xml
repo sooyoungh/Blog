@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardDAO">
+    <select id="list" resultType="boardDTO">
+        SELECT * FROM BOARD
+        ORDER BY seq
+    </select>
+
+    <!-- 해당 쿼리문은 int인자 타입을 받아서 boardDTO라는 별칭의 인자 타입을 리턴한다. -->
+    <select id="select" parameterType="int" resultType="boardDTO">
+        SELECT * FROM
+            BOARD WHERE seq=#{seq}
+    </select>
+
+    <!-- 들어오는 인자는 boardDTO라는 별칭을 가진 인자이다.  -->
+    <insert id="insert" parameterType="boardDTO">
+        INSERT INTO BOARD(title, content, writer, password, regDate, cnt)
+        VALUES (${title}, ${content}, ${writer}, #{password}, SYSDATE, 0);
+        <selectKey keyProperty="seq" resultType="Integer">
+            SELECT NVL(MAX(seq), 0) FROM BOARD
+        </selectKey>
+    </insert>
+
+    <update id="update" parameterType="boardDTO">
+        UPDATE BOARD SET title = #{title}, content = #{content}, writer = ${writer}
+        WHERE seq = #{seq}
+          AND password = #{password}
+    </update>
+
+    <update id="updateCount" parameterType="int">
+        UPDATE BOARD SET
+            cnt = cnt + 1
+        WHERE seq = #{seq}
+    </update>
+
+    <delete id="delete" parameterType="boardDTO">
+        DELETE FROM BOARD
+        WHERE seq = #{seq}
+          AND password = #{password}
+    </delete>
+
+    <delete id="deleteAll">
+        DELETE FROM BOARD
+    </delete>
+</mapper>
