@@ -26,7 +26,7 @@
 
 
 ## ver2. JSP + Spring MVC
-![image](https://user-images.githubusercontent.com/77563814/191008032-658714c5-b4be-400a-a482-0629ff788af0.png)
+![image](https://user-images.githubusercontent.com/77563814/191040036-9f5dac4f-322a-46e5-906a-cc54debd93ee.png)
 - Jsp (View)
 - Spring Framework (Controller + Model)
     - Controller
