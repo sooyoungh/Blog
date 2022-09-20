@@ -39,7 +39,8 @@
 
 <aside>
   
-    ✏️ 모든 요청/응답을 받는 FrontController을 도입한 Spring MVC 구조로, FrontController가 Controller/View를 찾아 요청/반환을 담당한다.
+    ✏️ 모든 요청/응답을 받는 FrontController을 도입한 Spring MVC 구조로, 
+        FrontController가 Controller/View를 찾아 요청/반환을 담당한다.
 
 </aside>
 
@@ -63,7 +64,8 @@
 
 <aside>
 
-    ✏️ 프로그램이 확장됨에 따라 프론트와 백엔드를 분리한 웹 구조로, 서로 Http 통신하여 json형태로 데이터를 주고 받는다.
+    ✏️ 프로그램이 확장됨에 따라 프론트와 백엔드를 분리한 웹 구조로, 
+        서로 Http 통신하여 json형태로 데이터를 주고 받는다.
 
 </aside>
 
