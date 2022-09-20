@@ -14,6 +14,15 @@
 ## ver1. JSP + Servlet
 
 ![image](https://user-images.githubusercontent.com/77563814/191008015-aa4aa778-db29-4446-b2e1-84c033afc29f.png)
+
+
+
+<aside>
+  
+    ✏️ 가장 단순한 MVC2 패턴으로, M,V,C가 분리되어 있다.
+
+</aside>
+
 - Jsp (View)
 - Servlet (Controller)
 - JavaBeans (Model)
@@ -27,6 +36,13 @@
 
 ## ver2. JSP + Spring MVC
 ![image](https://user-images.githubusercontent.com/77563814/191040036-9f5dac4f-322a-46e5-906a-cc54debd93ee.png)
+
+<aside>
+  
+    ✏️ 모든 요청/응답을 받는 FrontController을 도입한 Spring MVC 구조로, FrontController가 Controller/View를 찾아 요청/반환을 담당한다.
+
+</aside>
+
 - Jsp (View)
 - Spring Framework (Controller + Model)
     - Controller
@@ -43,8 +59,20 @@
 
 ## ver3. Front + Back(Spring Boot)
 ![image](https://user-images.githubusercontent.com/77563814/191008041-991b8d92-a3b1-48e0-b686-6869213c6358.png)
+
+
+<aside>
+
+    ✏️ 프로그램이 확장됨에 따라 프론트와 백엔드를 분리한 웹 구조로, 서로 Http 통신하여 json형태로 데이터를 주고 받는다.
+
+</aside>
+
+
+
+
 - Front : Html, Css, Javascript
 - Back : Spring Boot
+
 
 > 동작 과정
 > 
